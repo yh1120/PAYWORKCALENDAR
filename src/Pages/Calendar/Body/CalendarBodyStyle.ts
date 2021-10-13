@@ -15,11 +15,10 @@ const DayList = styled.div`
 
 const Day = styled.div`
   width: 50px;
+  height: 30px;
   text-align: center;
-
-  /* ${(props: { day: string }) => css`
-  color: ${props.day} === "일" ? red: blue;
-`} */
+  color: ${(props: { day: string }) =>
+    props.day === '일' ? 'red' : props.day === '토' ? 'blue' : '#000'};
 `;
 
 const DateList = styled.div`
@@ -30,13 +29,19 @@ const DateList = styled.div`
 
 const Date = styled.div`
   width: 50px;
-  height: 60px;
-  line-height: 60px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
   cursor: pointer;
-  ${(props: { color: string }) => css`
-    color: ${props.color};
-  `}
+  opacity: ${(props: { data: string; today: boolean }) =>
+    props.data === 'this' ? 1 : 0.3};
+  ${(props: { data: string; today: boolean }) =>
+    props.today === true &&
+    css`
+      border: 1px solid lightgrey;
+      border-radius: 20px;
+      background-color: lightgrey;
+    `}
 `;
 
 export const style = {

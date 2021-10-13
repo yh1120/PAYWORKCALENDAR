@@ -1,38 +1,12 @@
 import React from 'react';
-import { useRecoilState, useResetRecoilState } from 'recoil';
+import { Button } from 'Components';
+import { useRecoilValue } from 'recoil';
 import { atomMonth, atomYear } from 'Recoil/atom';
 import { style } from './CalendarHeaderStyle';
 
 const CalendarHeader = () => {
-  const [year, setYear] = useRecoilState(atomYear);
-  const [month, setMonth] = useRecoilState(atomMonth);
-  const resetYear = useResetRecoilState(atomYear);
-  const resetMonth = useResetRecoilState(atomMonth);
-
-  const resetYearMonth = () => {
-    resetMonth();
-    resetYear();
-  };
-
-  const handlePrevMonth = () => {
-    if (month > 0) {
-      setMonth((prev) => prev - 1);
-    } else {
-      setYear((prev) => prev - 1);
-      setMonth(11);
-    }
-  };
-  const handleNextMonth = () => {
-    if (month < 11) {
-      setMonth((prev) => prev + 1);
-    } else {
-      setYear((prev) => prev + 1);
-      setMonth(0);
-    }
-  };
-  const handleThisMonth = () => {
-    resetYearMonth();
-  };
+  const month = useRecoilValue(atomMonth);
+  const year = useRecoilValue(atomYear);
 
   return (
     <Header>
@@ -40,13 +14,13 @@ const CalendarHeader = () => {
         <p>{`${year}. ${month < 9 ? `0${month + 1}` : month + 1}`}</p>
       </YearMonth>
       <ButtonContainer>
-        <Button onClick={handlePrevMonth}>
+        <Button state="prev">
           <ArrowLeft />
         </Button>
-        <Button onClick={handleNextMonth}>
+        <Button state="next">
           <ArrowRight />
         </Button>
-        <Button onClick={handleThisMonth}>
+        <Button state="thisMonth">
           <ThisMonth>이번달</ThisMonth>
         </Button>
       </ButtonContainer>
@@ -56,12 +30,5 @@ const CalendarHeader = () => {
 
 export default CalendarHeader;
 
-const {
-  Header,
-  YearMonth,
-  ButtonContainer,
-  Button,
-  ArrowLeft,
-  ArrowRight,
-  ThisMonth,
-} = style;
+const { Header, YearMonth, ButtonContainer, ArrowLeft, ArrowRight, ThisMonth } =
+  style;
