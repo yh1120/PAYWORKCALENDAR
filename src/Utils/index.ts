@@ -1,2 +1,2 @@
-export { getDate, getPrevDate, getThisDate, getNextDate } from './date';
+export { getDate, getPrevDates, getThisDates, getNextDates } from './date';
 export { dayList } from './constants';

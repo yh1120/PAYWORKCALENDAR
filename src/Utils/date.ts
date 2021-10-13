@@ -6,7 +6,7 @@ export const getDate = () => {
   };
 };
 
-export const getPrevDate = () => {
+export const getPrevDates = () => {
   const firstDay = 2;
   const lastDate = 30;
   const temp: number[] = [];
@@ -19,7 +19,7 @@ export const getPrevDate = () => {
   console.log(temp);
   return temp;
 };
-export const getThisDate = () => {
+export const getThisDates = () => {
   const lastDate = 31;
   const temp: number[] = [];
   for (let i = 1; i <= lastDate; i++) {
@@ -27,7 +27,7 @@ export const getThisDate = () => {
   }
   return temp;
 };
-export const getNextDate = () => {
+export const getNextDates = () => {
   const lastDay = 4;
   const temp: number[] = [];
   // if (lastDay === 6) {
