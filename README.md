@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+<h1 align='middle'>
+PAYWORKCALENAR</h1>
+<p align='middle'> <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/yh1120/PAYWORKCALENDAR?color=blueviolet"> <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/yh1120/PAYWORKCALENDAR"> 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align='middle'><a href='https://payworkcalendar.netlify.app/'>배포링크</a></h2>
 
-## Available Scripts
 
-In the project directory, you can run:
+## 📌 프로젝트 소개
 
-### `yarn start`
+###  Typescript와 Recoil을 결함합 캘린더
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br/>
 
-### `yarn test`
+## 📑 구현 목록
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`이번 달 캘린더 불러오기`
 
-### `yarn build`
+- 화면을 처음 불러오거나 새로고침 할 때, 이번 달 버튼을 누를 때 이번 달 캘린더 불러오기.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`캘린더 이동`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 캘린더 상단의 버튼을 클릭하여 지난 달 혹은 다음 달로 이동.
+- 캘린더 내부의 이전 달 혹은 다음 달의 날짜를 클릭시 이동.
 
-### `yarn eject`
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`오늘 날짜 표시`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 오늘 날짜를 자동으로 표시하여 확인 가능.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br/>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`날짜 선택`
 
-## Learn More
+- 캘린더의 날짜를 클릭하면 다른 색깔로 클릭한 날짜 표시.
+- 같은 날을 한번 더 누르면 표시 해제.
+- 이전 달, 다음 달의 날짜를 누르면 이동과 동시에 날짜 표시.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+<br/>
+
+## 💻 실행 방법
+
+### 설치
+
+`npm install`
+
+### 실행
+
+`npm start`
+
+<br/>
+
+## ⚙ 기술 스택
+
+React, TypeScript, styled-components, Recoil
