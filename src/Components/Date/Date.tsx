@@ -17,10 +17,10 @@ type IDate = {
 };
 
 const Date: React.FC<IDate> = (props) => {
-  const prevMonth = useSetRecoilState(selectPrevMonth);
-  const nextMonth = useSetRecoilState(selectNextMonth);
   const [year, month] = useRecoilValue(atomYearMonth);
   const [clickedDate, setClickedDate] = useRecoilState(atomClickedDate);
+  const prevMonth = useSetRecoilState(selectPrevMonth);
+  const nextMonth = useSetRecoilState(selectNextMonth);
   const resetClickedDate = useResetRecoilState(atomClickedDate);
 
   const changeClickedDate = (state: string, date: number) => {

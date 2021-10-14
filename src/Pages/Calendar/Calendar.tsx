@@ -1,7 +1,7 @@
 import React from 'react';
-import { style } from './CalendarStyle';
 import CalendarHeader from './Header/CalendarHeader';
 import CalendarBody from './Body/CalendarBody';
+import { style } from './CalendarStyle';
 
 const Calender = () => {
   return (

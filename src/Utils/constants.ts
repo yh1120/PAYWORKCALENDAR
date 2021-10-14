@@ -1,1 +1,1 @@
-export const dayList = ['일', '월', '화', '수', '목', '금', '토'];
+export const DAY_LIST = ['일', '월', '화', '수', '목', '금', '토'];

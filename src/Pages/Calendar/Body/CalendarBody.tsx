@@ -2,16 +2,16 @@ import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { atomClickedDate, atomYearMonth } from 'Recoil/atom';
 import { nextDateList, prevDateList, thisDateList } from 'Recoil/selector';
-import { dayList, getDate } from 'Utils/';
-import { style } from './CalendarBodyStyle';
+import { DAY_LIST, getDate } from 'Utils/';
 import { Date } from 'Components';
+import { style } from './CalendarBodyStyle';
 
 const CalendarBody = () => {
+  const [year, month] = useRecoilValue(atomYearMonth);
+  const clickedDate = useRecoilValue(atomClickedDate);
   const prevDates = useRecoilValue(prevDateList);
   const thisDates = useRecoilValue(thisDateList);
   const nextDates = useRecoilValue(nextDateList);
-  const [year, month] = useRecoilValue(atomYearMonth);
-  const clickedDate = useRecoilValue(atomClickedDate);
 
   const validateToday = (date: number) => {
     const today = getDate();
@@ -35,7 +35,7 @@ const CalendarBody = () => {
   return (
     <Body>
       <DayList>
-        {dayList.map((day, idx) => (
+        {DAY_LIST.map((day, idx) => (
           <Day key={idx} day={day}>
             {day}
           </Day>

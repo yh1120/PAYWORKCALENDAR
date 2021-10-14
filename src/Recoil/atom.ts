@@ -1,5 +1,5 @@
-import { atom } from 'recoil';
 import { getDate } from 'Utils';
+import { atom } from 'recoil';
 
 type IClickedDate = {
   year: number;

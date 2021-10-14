@@ -1,2 +1,2 @@
 export { getDate } from './date';
-export { dayList } from './constants';
+export { DAY_LIST } from './constants';
