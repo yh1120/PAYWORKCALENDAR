@@ -48,6 +48,13 @@ PAYWORKCALENAR</h1>
 
 <br/>
 
+`TypeScript`
+
+- TypeScript를 활용하여 변수 타입 관리.
+- 함수의 입력과 출력을 정의하여 오류 방지.
+
+<br/>
+
 ## 💻 실행 방법
 
 ### 설치
