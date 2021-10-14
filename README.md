@@ -8,7 +8,7 @@ PAYWORKCALENAR</h1>
 ## 📌 프로젝트 소개
 
 ###  Typescript와 Recoil을 결함합 캘린더
-> ❕ **Slack과 유사한 채팅 서비스에 고전 게임인 Pong을 즐길 수 있는 서비스입니다. **❗
+
 
 <br/>
 
