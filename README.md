@@ -58,7 +58,7 @@ PAYWORKCALENAR</h1>
 `Netlify`
 
 - Netlify와 github을 연결한 자동 배포.
-- 
+
 <br/>
 
 ## 💻 실행 방법
