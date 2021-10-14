@@ -55,6 +55,12 @@ PAYWORKCALENAR</h1>
 
 <br/>
 
+`Netlify`
+
+- Netlify와 github을 연결한 자동 배포.
+- 
+<br/>
+
 ## 💻 실행 방법
 
 ### 설치
@@ -69,4 +75,4 @@ PAYWORKCALENAR</h1>
 
 ## ⚙ 기술 스택
 
-React, TypeScript, styled-components, Recoil
+React, TypeScript, styled-components, Recoil, Netlify
