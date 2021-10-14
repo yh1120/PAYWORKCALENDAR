@@ -1,11 +1,6 @@
 import { getDate } from 'Utils';
 import { atom } from 'recoil';
-
-type IClickedDate = {
-  year: number;
-  month: number;
-  date: number;
-};
+import { IClickedDate } from 'Types';
 
 export const atomYearMonth = atom<number[]>({
   key: 'yearMonth',

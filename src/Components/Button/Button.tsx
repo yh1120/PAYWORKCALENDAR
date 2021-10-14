@@ -5,12 +5,8 @@ import {
   selectPrevMonth,
   selectResetMonth,
 } from 'Recoil/selector';
+import { IButton } from 'Types';
 import { style } from './ButtonStyle';
-
-type IButton = {
-  state: string;
-  children: React.ReactNode;
-};
 
 const Button: React.FC<IButton> = (props) => {
   const state = props.state;

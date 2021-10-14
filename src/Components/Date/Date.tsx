@@ -7,14 +7,8 @@ import {
 } from 'recoil';
 import { atomClickedDate, atomYearMonth } from 'Recoil/atom';
 import { selectNextMonth, selectPrevMonth } from 'Recoil/selector';
+import { IDate } from 'Types';
 import { style } from './DateStyle';
-
-type IDate = {
-  state: string;
-  today: boolean;
-  clicked: boolean;
-  children: number;
-};
 
 const Date: React.FC<IDate> = (props) => {
   const [year, month] = useRecoilValue(atomYearMonth);

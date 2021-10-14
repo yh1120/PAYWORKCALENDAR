@@ -1,10 +1,5 @@
 import styled, { css } from 'styled-components';
-
-type IDateStyle = {
-  state: string;
-  today: boolean;
-  clicked: boolean;
-};
+import { IDateStyle } from 'Types';
 
 const DateStyle = styled.div`
   width: 50px;
