@@ -75,11 +75,3 @@ export const selectNextMonth = selector({
     }
   },
 });
-
-export const selectResetMonth = selector({
-  key: 'backMonth',
-  get: () => {},
-  set: ({ reset }) => {
-    reset(atomYearMonth);
-  },
-});

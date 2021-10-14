@@ -1,14 +1,12 @@
 <h1 align='middle'>
 PAYWORKCALENAR</h1>
-<p align='middle'> <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/yh1120/PAYWORKCALENDAR?color=blueviolet"> <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/yh1120/PAYWORKCALENDAR"> 
+<p align='middle'> <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/yh1120/PAYWORKCALENDAR?color=blueviolet"> <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/yh1120/PAYWORKCALENDAR">
 
 <h2 align='middle'><a href='https://payworkcalendar.netlify.app/'>배포링크</a></h2>
 
-
 ## 📌 프로젝트 소개
 
-###  Typescript와 Recoil을 결함합 캘린더
-
+### Typescript와 Recoil을 결함합 캘린더
 
 <br/>
 
@@ -39,7 +37,14 @@ PAYWORKCALENAR</h1>
 - 같은 날을 한번 더 누르면 표시 해제.
 - 이전 달, 다음 달의 날짜를 누르면 이동과 동시에 날짜 표시.
 
+<br/>
 
+`Recoil`
+
+- 현재 년, 월을 저장하는 atomYearMonth, 클릭한 날짜를 저장하는 atomClickedDate.
+- atomYearMonth reset으로 이번달로 돌아오기.
+- selector로 캘린더에 나타낼 DateList 가져오기.
+- selector를 통해 이전 달, 다음 달 기능으로 atomYearMonth 변경.
 
 <br/>
 
