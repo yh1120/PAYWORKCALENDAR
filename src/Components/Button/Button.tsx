@@ -16,6 +16,7 @@ const Button: React.FC<IButton> = (props) => {
   const prevMonth = useSetRecoilState(selectPrevMonth);
   const nextMonth = useSetRecoilState(selectNextMonth);
   const resetMonth = useResetRecoilState(selectResetMonth);
+
   const state = props.state;
 
   const handleMoveMonth = () => {

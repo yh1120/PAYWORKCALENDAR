@@ -1,10 +1,11 @@
 import { selector } from 'recoil';
-import { atomYear, atomMonth } from './atom';
+import { atomYearMonth } from './atom';
 
 export const prevDateList = selector<number[]>({
   key: 'prevDateList',
   get: ({ get }) => {
-    const date = new Date(get(atomYear), get(atomMonth), 0);
+    const [year, month] = get(atomYearMonth);
+    const date = new Date(year, month, 0);
     const prevLastDate = date.getDate();
     const prevLastDay = date.getDay();
     const temp: number[] = [];
@@ -21,7 +22,8 @@ export const prevDateList = selector<number[]>({
 export const thisDateList = selector<number[]>({
   key: 'thisDateList',
   get: ({ get }) => {
-    const date = new Date(get(atomYear), get(atomMonth) + 1, 0);
+    const [year, month] = get(atomYearMonth);
+    const date = new Date(year, month + 1, 0);
     const thisLastDate = date.getDate();
     const temp: number[] = [];
     for (let i = 1; i <= thisLastDate; i++) {
@@ -34,7 +36,8 @@ export const thisDateList = selector<number[]>({
 export const nextDateList = selector<number[]>({
   key: 'nextDateList',
   get: ({ get }) => {
-    const date = new Date(get(atomYear), get(atomMonth) + 1, 0);
+    const [year, month] = get(atomYearMonth);
+    const date = new Date(year, month + 1, 0);
     const thisLastDay = date.getDay();
     const temp: number[] = [];
     if (thisLastDay === 6) {
@@ -51,13 +54,11 @@ export const selectPrevMonth = selector({
   key: 'prevMonth',
   get: () => {},
   set: ({ get, set }) => {
-    const month = get(atomMonth);
-    const year = get(atomYear);
+    const [year, month] = get(atomYearMonth);
     if (month > 0) {
-      set(atomMonth, month - 1);
+      set(atomYearMonth, [year, month - 1]);
     } else {
-      set(atomYear, year - 1);
-      set(atomMonth, 11);
+      set(atomYearMonth, [year - 1, 11]);
     }
   },
 });
@@ -66,13 +67,11 @@ export const selectNextMonth = selector({
   key: 'nextMonth',
   get: () => {},
   set: ({ get, set }) => {
-    const month = get(atomMonth);
-    const year = get(atomYear);
+    const [year, month] = get(atomYearMonth);
     if (month < 11) {
-      set(atomMonth, month + 1);
+      set(atomYearMonth, [year, month + 1]);
     } else {
-      set(atomYear, year + 1);
-      set(atomMonth, 0);
+      set(atomYearMonth, [year + 1, 0]);
     }
   },
 });
@@ -81,7 +80,6 @@ export const selectResetMonth = selector({
   key: 'backMonth',
   get: () => {},
   set: ({ reset }) => {
-    reset(atomMonth);
-    reset(atomYear);
+    reset(atomYearMonth);
   },
 });

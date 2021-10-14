@@ -1,12 +1,11 @@
 import React from 'react';
 import { Button } from 'Components';
 import { useRecoilValue } from 'recoil';
-import { atomMonth, atomYear } from 'Recoil/atom';
+import { atomYearMonth } from 'Recoil/atom';
 import { style } from './CalendarHeaderStyle';
 
 const CalendarHeader = () => {
-  const month = useRecoilValue(atomMonth);
-  const year = useRecoilValue(atomYear);
+  const [year, month] = useRecoilValue(atomYearMonth);
 
   return (
     <Header>

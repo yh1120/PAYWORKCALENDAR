@@ -1,17 +1,18 @@
 import { atom } from 'recoil';
 import { getDate } from 'Utils';
 
-export const atomYear = atom<number>({
-  key: 'year',
-  default: getDate().year,
+type IClickedDate = {
+  year: number;
+  month: number;
+  date: number;
+};
+
+export const atomYearMonth = atom<number[]>({
+  key: 'yearMonth',
+  default: [getDate().year, getDate().month],
 });
 
-export const atomMonth = atom<number>({
-  key: 'month',
-  default: getDate().month,
-});
-
-export const atomClickedDate = atom({
+export const atomClickedDate = atom<IClickedDate>({
   key: 'clickedDate',
-  default: 'asdf',
+  default: { year: 0, month: 0, date: 0 },
 });
