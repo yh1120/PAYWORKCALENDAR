@@ -4,7 +4,7 @@ import { atomYearMonth } from 'Recoil/atom';
 import { Button } from 'Components';
 import { style } from './CalendarHeaderStyle';
 
-const CalendarHeader = () => {
+const CalendarHeader: React.FC = () => {
   const [year, month] = useRecoilValue(atomYearMonth);
 
   return (

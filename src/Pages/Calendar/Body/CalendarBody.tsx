@@ -6,7 +6,7 @@ import { DAY_LIST, getDate } from 'Utils/';
 import { Date } from 'Components';
 import { style } from './CalendarBodyStyle';
 
-const CalendarBody = () => {
+const CalendarBody: React.FC = () => {
   const [year, month] = useRecoilValue(atomYearMonth);
   const clickedDate = useRecoilValue(atomClickedDate);
   const prevDates = useRecoilValue(prevDateList);
@@ -15,21 +15,17 @@ const CalendarBody = () => {
 
   const validateToday = (date: number) => {
     const today = getDate();
-    if (month === today.month && date === today.date && year === today.year) {
-      return true;
-    }
-    return false;
+    return month === today.month && date === today.date && year === today.year
+      ? true
+      : false;
   };
 
   const validateClickedDay = (date: number) => {
-    if (
-      date === clickedDate.date &&
+    return date === clickedDate.date &&
       month === clickedDate.month &&
       year === clickedDate.year
-    ) {
-      return true;
-    }
-    return false;
+      ? true
+      : false;
   };
 
   return (

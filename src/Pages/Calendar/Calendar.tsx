@@ -3,7 +3,7 @@ import CalendarHeader from './Header/CalendarHeader';
 import CalendarBody from './Body/CalendarBody';
 import { style } from './CalendarStyle';
 
-const Calender = () => {
+const Calender: React.FC = () => {
   return (
     <Container>
       <Inner>
